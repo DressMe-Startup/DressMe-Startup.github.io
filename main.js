@@ -37,7 +37,7 @@ scene.add(ciambella1);
 
 ciambella1.position.x -= 15;
 
-const dm_geometry = new THREE.BoxGeometry( 1, 1, 1 );
+const dm_geometry = new THREE.BoxGeometry(10, 10, 10);
 const dm_material = new THREE.MeshStandardMaterial( {map: texture_dressme} );
 const cube = new THREE.Mesh( dm_geometry, dm_material );
 scene.add( cube );
@@ -49,6 +49,10 @@ function animate() {
     ciambella1.rotation.x += 0.01;
     ciambella1.rotation.y += 0.005;
     ciambella1.rotation.z += 0.01;
+
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+    cube.rotation.z += 0.01;
     
     renderer.render(scene, camera);
 }
