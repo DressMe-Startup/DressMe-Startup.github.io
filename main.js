@@ -1,6 +1,3 @@
-import * as THREE from './three.module.js';
-import { TextGeometry } from './jsm/geometries/TextGeometry.js';
-
 //setup scena e camera
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -19,9 +16,9 @@ window.addEventListener( 'resize', () => {
     renderer.setSize( window.innerWidth, window.innerHeight );
 }, false);
 
-document.body.addEventListener('wheel', (e) => {
+/*document.body.addEventListener('wheel', (e) => {
     camera.position.z += e.deltaY * -0.01;
-});
+});*/
 
 //setup luce
 const light = new THREE.AmbientLight(0xFFFFFF);
@@ -53,32 +50,6 @@ logo.position.x += 15;
 
 scene.add(logo);
 
-
-
-function creaTesto3d(testo) {
-    const material = new THREE.MeshPhongMaterial({
-        color: 0xff0000, 
-        specular: 0xffffff
-    });
-
-    const geometry = new THREE.TextGeometry(testo, {
-        size: 50,
-        height: 10,
-        curveSegments: 12,
-    
-        bevelThickness: 1,
-        bevelSize: 1,
-        bevelEnabled: true
-    });
-
-    return new THREE.Mesh(geometry, material)
-}
-
-
-const testo1 = creaTesto3d("testo1");
-testo1.setZ(40);
-scene.add(testo1);
-
 function animate() {
     requestAnimationFrame(animate);
     
@@ -90,7 +61,17 @@ function animate() {
     logo.rotation.y += 0.01;
     logo.rotation.z += 0.01;
 
+    camera.position.z = getScrollPercent() * 0.7 + 30;
+
     renderer.render(scene, camera);
+}
+
+function getScrollPercent() {
+    var h = document.documentElement, 
+        b = document.body,
+        st = 'scrollTop',
+        sh = 'scrollHeight';
+    return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
 }
 
 animate();
