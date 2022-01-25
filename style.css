@@ -18,3 +18,23 @@ body, canvas {
     top: 0;
     left: 0;
 }
+
+@font-face {
+  font-family: Aladin;
+  src: url("fonts/Aladin-Regular.eot");
+  src: url("fonts/Aladin-Regular.eot?#iefix") format("embedded-opentype"),
+   url("fonts/Aladin-Regular.woff") format("woff"),
+   url("fonts/Aladin-Regular.woff2") format("woff2"),
+   url("fonts/Aladin-Regular.ttf")  format("truetype"),
+   url("fonts/Aladin-Regular.svg") format("svg");
+}
+
+@font-face {
+  font-family: Balivia;
+  src: url("fonts/BaliviaFree-Bold.eot");
+  src: url("fonts/BaliviaFree-Bold.eot?#iefix") format("embedded-opentype"),
+   url("fonts/BaliviaFree-Bold.woff") format("woff"),
+   url("fonts/BaliviaFree-Bold.woff2") format("woff2"),
+   url("fonts/Balivia-Regular.ttf")  format("truetype"),
+   url("fonts/BaliviaFree-Bold.svg") format("svg");
+}

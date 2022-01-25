@@ -28,19 +28,27 @@
     margin-bottom: 20px;
 }
 
+.timeline ul li:hover {
+  background-color: #2c2d30;
+  color: white;
+  color: rgb(103, 214, 214);
+}
+
 .timeline ul li:last-child {
     margin-bottom: 0;
 }
 
 .timeline-content h1 {
     font-weight: 500;
-    font-size: 25px;
+    font-size: 35px;
+    font-family: Aladin;
     line-height: 30px;
     margin-bottom: 10px;
 }
 
 .timeline-content p {
     font-size: 16px;
+    font-family: Balivia;
     line-height: 30px;
     font-weight: 300;
 }
