@@ -16,10 +16,6 @@ window.addEventListener( 'resize', () => {
     renderer.setSize( window.innerWidth, window.innerHeight );
 }, false);
 
-/*document.body.addEventListener('wheel', (e) => {
-    camera.position.z += e.deltaY * -0.01;
-});*/
-
 //setup luce
 const light = new THREE.AmbientLight(0xFFFFFF);
 scene.add(light);
