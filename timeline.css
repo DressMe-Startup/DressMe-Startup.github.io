@@ -1,8 +1,8 @@
 .tl-container {
     min-height: 100vh;
     width: 100vw;
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
     padding: 100px 0;
     z-index: 2;
@@ -11,10 +11,11 @@
 .timeline {
     width: 80%;
     height: auto;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     position: relative;
 }
+
 
 .timeline ul {
     list-style: none;
@@ -22,17 +23,33 @@
 
 .timeline ul li {
     padding: 20px;
-    background-color: #1e1f22;
+    transition-delay: 0.6s;
+    transition-duration: 300ms ;
+    background-color: #0f0f10;
     color: white;
     border-radius: 10px;
     margin-bottom: 20px;
 }
 
-.timeline ul li:hover {
-  background-color: #2c2d30;
+
+#dx:hover, .timeline ul li:hover{
+    transform: translateX(40%);
+    transition: transform 250ms;
+    background-color: #000000;
   color: white;
-  color: rgb(103, 214, 214);
+  color: #ff6200;
 }
+
+#sx:hover, .timeline ul li:hover{
+    transform: translateX(-40%);
+    transition: transform 250ms ;
+    background-color: #000000;
+  color: white;
+  color: #ff6200;
+}
+
+
+
 
 .timeline ul li:last-child {
     margin-bottom: 0;
@@ -66,7 +83,6 @@
         position: absolute;
         top: 0;
         left: 50%;
-        transform: translateX(-50%);
         width: 2px;
         height: 100%;
         background-color: gray;
@@ -79,13 +95,11 @@
     .timeline ul li:nth-child(odd) {
         float: left;
         clear: right;
-        transform: translateX(-30px);
         border-radius: 20px 0px 20px 20px;
     }
     .timeline ul li:nth-child(even) {
         float: right;
         clear: left;
-        transform: translateX(30px);
         border-radius: 0px 20px 20px 20px;
     }
     .timeline ul li::before {
@@ -98,11 +112,9 @@
         top: 0px;
     }
     .timeline ul li:nth-child(odd)::before {
-        transform: translate(50%, -50%);
         right: -30px;
     }
     .timeline ul li:nth-child(even)::before {
-        transform: translate(-50%, -50%);
         left: -30px;
     }
     .timeline-content .date {
@@ -110,6 +122,6 @@
         top: -30px;
     }
     .timeline ul li:hover::before {
-        background-color: aqua;
+        background-color: #ff6200;
     }
 }
