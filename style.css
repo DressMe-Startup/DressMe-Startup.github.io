@@ -1,10 +1,12 @@
-body, canvas {
-    margin: 0 !important;
-    padding: 0 !important;
-    /*overflow: hidden;*/
-    overflow-x: hidden;
-    font-family: Arial, Helvetica, sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Modak");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+
 
 #background-canvas {
     position: fixed;
@@ -36,4 +38,188 @@ body, canvas {
    url("fonts/BaliviaFree-Bold.woff2") format("woff2"),
    url("fonts/Balivia-Regular.ttf")  format("truetype"),
    url("fonts/BaliviaFree-Bold.svg") format("svg");
+}
+
+
+.waviy {
+  position: relative;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-family: DressLines;
+  font-size: 40px;
+  color: rgb(45, 139, 228);
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
+
+@font-face {
+  font-family: 'DressLines';
+  src: url('fonts/DressLinesDemoRegular.eot');
+  src: url('fonts/DressLinesDemoRegular.eot?#iefix') format('embedded-opentype'),
+      url('fonts/DressLinesDemoRegular.woff2') format('woff2'),
+      url('fonts/DressLinesDemoRegular.woff') format('woff'),
+      url('fonts/DressLinesDemoRegular.svg#DressLinesDemoRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+
+
+
+
+      /*navbar*/
+      @import url("https://fonts.googleapis.com/css?family=Crimson+Text&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans&display=swap");
+
+.pie {
+  -webkit-tap-highlight-color: transparent;
+  background: #000;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  height: 400px;
+  left: -200px;
+  position: absolute;
+  top: -200px;
+  width: 400px;
+  transform: translateX(-200px) translateY(-200px);
+  transition: transform 300ms;
+}
+.pie-color:hover {
+  opacity: 0.85;
+}
+.pie-color:active {
+  opacity: 0.7;
+}
+.pie1 {
+  clip-path: polygon(200px 200px, 344px 450px, 0 450px);
+  transition-delay: 30ms;
+  z-index: 3;
+}
+.pie2 {
+  clip-path: polygon(200px 200px, 344px 450px, 450px 344px);
+  transition-delay: 60ms;
+  z-index: 3;
+}
+.pie3 {
+  clip-path: polygon(200px 200px, 450px 0, 450px 344px);
+  transition-delay: 90ms;
+  z-index: 3;
+}
+.pie-color {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.pie-color1 {
+  background: linear-gradient(135deg, #f12711, #b37a01);
+  clip-path: polygon(200px 200px, 344px 450px, 0 450px);
+}
+.pie-color2 {
+  background: linear-gradient(135deg, #444, #3239b1);
+  clip-path: polygon(200px 200px, 344px 450px, 450px 344px);
+}
+.pie-color3 {
+  background: linear-gradient(135deg, #444, #9a1ba0);
+  clip-path: polygon(200px 200px, 450px 0, 450px 344px);
+}
+.card1 {
+  left: 216px;
+  position: absolute;
+  top: 300px;
+  width: 46px;
+  z-index: 3;
+}
+.discount {
+  left: 288px;
+  position: absolute;
+  top: 258px;
+  width: 46px;
+  z-index: 3;
+}
+.cart {
+  left: 324px;
+  position: absolute;
+  top: 188px;
+  width: 46px;
+  z-index: 3;
+}
+.menu {
+  -webkit-tap-highlight-color: transparent;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  height: 200px;
+  left: -100px;
+  position: absolute;
+  top: -100px;
+  width: 200px;
+  z-index: 3;
+}
+.hamburger {
+  cursor: pointer;
+  height: 46px;
+  left: 58%;
+  position: relative;
+  top: 58%;
+  width: 46px;
+  z-index: 3;
+}
+.title {
+  color: white;
+  font-family: "Crimson Text", serif;
+  font-size: 80px;
+  line-height: 84px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.hamburger path {
+  transition: transform 300ms;
+}
+.hamburger path:nth-child(1) {
+  transform-origin: 25% 29%;
+}
+.hamburger path:nth-child(2) {
+  transform-origin: 50% 50%;
+}
+.hamburger path:nth-child(3) {
+  transform-origin: 75% 72%;
+}
+.hamburger path:nth-child(4) {
+  transform-origin: 75% 29%;
+}
+.hamburger path:nth-child(5) {
+  transform-origin: 25% 72%;
+}
+.active .pie {
+  transform: translateX(0) translateY(0);
+}
+.active .hamburger path:nth-child(1) {
+  transform: rotate(45deg);
+}
+.active .hamburger path:nth-child(2) {
+  transform: scaleX(0);
+}
+.active .hamburger path:nth-child(3) {
+  transform: rotate(45deg);
+}
+.active .hamburger path:nth-child(4) {
+  transform: rotate(-45deg);
+}
+.active .hamburger path:nth-child(5) {
+  transform: rotate(-45deg);
 }
